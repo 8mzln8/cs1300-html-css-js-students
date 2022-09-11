@@ -2,13 +2,15 @@
   background-color: lightblue;
 }
 
+
+
 .gallery-item-container {
   /* TODO add styles (hint: use flex!) https://www.w3schools.com/cssref/ */
   display: flex;  /* you need this to align images, can be flex or block*/
   justify-content: center; /*x axis*/
   flex-direction: row; /*alignment in row or center */
   align-items: center; /*y axis*/
-  flex-wrap: wrap; /* changes with sizing */
+  flex-wrap: wrap; /* changes with sizing the screeb */
 }
 
 .gallery-item{

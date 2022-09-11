@@ -13,7 +13,6 @@ const apiRequest = async () => {
 
   // TODO fill in your own port number 
   const PORT_NUMBER = "8010";
-
   const baseUrl = `http://localhost:${PORT_NUMBER}/proxy/api/`
 
   // This endpoint (https://www.fruityvice.com/doc/index.html#api-GET-getAll) returns a list of all the fruits and their info, feel free to play around with different endpoints!
@@ -36,6 +35,7 @@ const apiRequest = async () => {
 }
 
 const updatePage = async () => {
+  // grab element in html with id 
   const gallery = document.getElementById('cs1300-gallery');
 
   // Make API request and get an array of fruit objects
@@ -48,15 +48,14 @@ const updatePage = async () => {
   const filtered_fruits = fruitsArray.filter((fruit) => fruit.nutritions.sugar>15);
   console.log("sugar below 15", filtered_fruits);
   const sugarFruitsNames = filtered_fruits.map(fruit => fruit.name);
+
   console.log(sugarFruitsNames);
 
   // TODO: Create a new HTML element to display your data 
-  // TODO: Append your new element to the page
 
-    // TODO: Create a new HTML element to display your data 
   const newElem = document.createElement('div');
   newElem.innerHTML = "<p id='beginPara'> Fruits with more than 15g sugar: </p> <br> <br>";
-  // Append the new element to an existing part of the webpage
+  // TODO: Append your new element to the page
   gallery.append(newElem)
 
   for (let i = 0; i < sugarFruitsNames.length; i++) {
